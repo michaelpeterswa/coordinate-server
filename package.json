@@ -1,0 +1,30 @@
+{
+  "name": "coordinate-server",
+  "version": "1.0.0",
+  "description": "coordinate is an open location tracker for iOS devices.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelpeterswa/coordinate-server.git"
+  },
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/michaelpeterswa/coordinate-server/issues"
+  },
+  "homepage": "https://github.com/michaelpeterswa/coordinate-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "standard-version": "^9.1.1",
+    "supertest": "^6.1.3"
+  }
+}
