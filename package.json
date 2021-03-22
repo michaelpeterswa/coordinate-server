@@ -4,7 +4,10 @@
   "description": "coordinate is an open location tracker for iOS devices.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "npx nyc --reporter=json-summary --reporter=html --reporter=cobertura --reporter=text-summary mocha 'src/tests/*.test.js' --exit",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -21,9 +24,15 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "sqlite3": "^5.0.2"
+    "passport": "^0.4.1",
+    "passport-headerapikey": "^1.2.2",
+    "sqlite3": "^5.0.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "mocha": "^8.3.2",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
     "standard-version": "^9.1.1",
     "supertest": "^6.1.3"
   }
