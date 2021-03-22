@@ -2,26 +2,18 @@
 // coordinate-server
 // server.js
 
-// test
-
 // npm imports
 const express = require('express')
 const bodyParser = require('body-parser')
 const passport = require('passport')
 const HeaderAPIKeyStrategy = require('passport-headerapikey').HeaderAPIKeyStrategy
 var cors = require('cors')
-const fileUpload = require('express-fileupload')
 var path = require('path')
 require('dotenv').config()
 
 // local imports
 const db = require('./db')
-const organizationRouter = require('./routes/organization-router')
-const tourRouter = require('./routes/tour-router')
-const apikeyRouter = require('./routes/apikey-router')
-const mediaRouter = require('./routes/media-router')
-
-const Apikey = require('./models/apikey-model')
+const coordinateRouter = require('./routes/coordinate-router')
 
 // instantiate express.js
 const app = express()
@@ -36,9 +28,6 @@ app.use(cors())
 // Body Parsing of Request/Response objects
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
-
-// connect to MongoDB
-// db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 // route for '/'
 app.get('/', (req, res) => {
