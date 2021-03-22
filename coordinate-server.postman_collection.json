@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "da093897-d831-4105-80f7-6552e7b83feb",
+		"name": "coordinate-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "coordinate",
+			"item": [
+				{
+					"name": "get-coordinates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6968/c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6968",
+							"path": [
+								"c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-coordinate-by-id",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "Api-Key testing",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6968/c/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6968",
+							"path": [
+								"c",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-coordinate",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "Api-Key testing",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6968/c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6968",
+							"path": [
+								"c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-coordinate",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "Api-Key testing",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6968/c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6968",
+							"path": [
+								"c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-coordinate",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": "Api-Key testing",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6968/c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6968",
+							"path": [
+								"c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
