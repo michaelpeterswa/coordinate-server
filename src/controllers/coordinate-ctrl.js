@@ -5,23 +5,33 @@
 const { v4: uuidv4 } = require('uuid');
 
 createCoordinate = (req, res) => {
-    console.log(uuidv4())
+    res.status(200).json({
+        id: uuidv4()
+    })
 }
 
 updateCoordinate = async (req, res) => {
-    console.log(uuidv4())
+    res.status(200).json({
+        id: uuidv4()
+    })
 }
 
 deleteCoordinate = async (req, res) => {
-    console.log(uuidv4())
+    res.status(200).json({
+        id: uuidv4()
+    })
 }
 
 getCoordinateById = async (req, res) => {
-    console.log(uuidv4())
+    res.status(200).json({
+        id: uuidv4()
+    })
 }
 
 getCoordinates = async (req, res) => {
-    console.log(uuidv4())
+    res.status(200).json({
+        id: uuidv4()
+    })
 }
 
 module.exports = {
