@@ -1,6 +1,6 @@
 {
   "name": "coordinate-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "coordinate is an open location tracker for iOS devices.",
   "main": "server.js",
   "scripts": {
