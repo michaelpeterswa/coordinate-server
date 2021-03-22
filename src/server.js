@@ -11,8 +11,15 @@ var cors = require('cors')
 var path = require('path')
 require('dotenv').config()
 
+// better-sqlite3
+const dbPath = path.resolve(__dirname, process.env.SQLITE3_FILE)
+const db = require("better-sqlite3")(dbPath);
+
+db.prepare(
+  "CREATE TABLE IF NOT EXISTS coordinates (id TEXT, time TEXT, device TEXT, lat TEXT, lon TEXT)"
+).run();
+
 // local imports
-const db = require('./db')
 const coordinateRouter = require('./routes/coordinate-router')
 
 // instantiate express.js
@@ -20,7 +27,6 @@ const app = express()
 
 // port the app is currently serving to
 const port = 6968
-
 // app use directives
 
 // Cross-Origin
