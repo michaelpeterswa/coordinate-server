@@ -20,7 +20,6 @@ createCoordinate = (req, res) => {
         "lat": Number(req.body.lat),
         "lon": Number(req.body.lon)
     }
-    console.log(req.body)
     const insert = db.prepare('INSERT INTO coordinates (id, time, device, lat, lon)'
             + 'VALUES (@id, @time, @device, @lat, @lon)');
 
