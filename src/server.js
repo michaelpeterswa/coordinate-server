@@ -27,17 +27,33 @@ const app = express()
 
 // port the app is currently serving to
 const port = 6968
-// app use directives
 
+// app use directives
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 // Cross-Origin
 app.use(cors())
 // Body Parsing of Request/Response objects
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }));
 
+function renderIndex(res, bool) {
+  if (bool == true) {
+    res.render("index", {
+      error: true,
+      key: process.env.API_KEY
+    });
+  } else {
+    res.render("index", {
+      error: false,
+      key: process.env.API_KEY
+    });
+  }
+}
+
 // route for '/'
 app.get('/', (req, res) => {
-    res.send('coordinate-server')
+    renderIndex(res, false)
 })
 
 // initialization and implementation of api-keys

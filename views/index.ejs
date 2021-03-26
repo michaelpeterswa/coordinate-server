@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="icon"
+      href="favicon.ico"
+    />
+
+    <title>Coordinate</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/sticky-footer.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+    <script>
+      var options = {
+        bottom: '84px', // default: '32px'
+        time: '0.5s', // default: '0.3s'
+        label: "🌓",
+      };
+      new Darkmode(options).showWidget();
+    </script>
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-5">Coordinate</h1>
+      <p class="lead">
+        Welcome to Coordinate. This is your one-stop shop for open source location tracking.
+      </p>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+      <script>new ClipboardJS('.btn');</script>
+      <form class="form-inline"></form>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">API Key</div>
+          </div>
+          <input type="text" class="form-control" id="key" value="<%= key %>" readonly>
+          <div class="input-group-append">
+            <button class="btn btn-primary" data-clipboard-action="copy" data-clipboard-target="#key">
+              <i class="fas fa-clipboard"></i>
+            </button>
+          </div>
+        </div> 
+      </form>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted"><i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by michaelpeterswa in 2020</span>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+</html>
