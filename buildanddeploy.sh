@@ -12,6 +12,6 @@ docker rm coordinate
 
 docker pull michaelpeterswa/coordinate-server
 
-docker run -d -p 6969:6968 --name=coordinate --restart=always michaelpeterswa/coordinate-server
+docker run -d -p 6970:6968 --name=coordinate --restart=always michaelpeterswa/coordinate-server
 docker cp /home/michael/env.txt coordinate:/usr/src/app/.env
 docker restart coordinate
